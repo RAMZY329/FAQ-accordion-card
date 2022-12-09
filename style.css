@@ -1,0 +1,141 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --Very_dark_desaturated_blue: hsl(238, 29%, 16%);
+  --Soft_red: hsl(14, 88%, 65%);
+  --Soft_violet: hsl(273, 75%, 66%);
+  --Soft_blue: hsl(240, 73%, 65%);
+  --Very_dark_grayish_blue: hsl(237, 12%, 33%);
+  --Dark_grayish_blue: hsl(240, 6%, 50%);
+  --Light_grayish_blue: hsl(240, 5%, 91%);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+body {
+  background: var(--Soft_blue);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Kumbh Sans", sans-serif;
+}
+.main {
+  width: 750px;
+  height: 400px;
+  background-color: azure;
+  margin: 50px auto auto auto;
+  display: flex;
+  border-radius: 15px;
+}
+.imgs {
+  width: 45%;
+  background-image: url(images/illustration-woman-online-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 20rem;
+  background-position: 400% 50%;
+  position: relative;
+}
+.box {
+  margin-left: -65px;
+  position: absolute;
+  margin-top: 10.9rem;
+  width: 8.5rem;
+}
+.pattern_img {
+  width: 20rem;
+  position: absolute;
+  margin-top: 6rem;
+  margin-left: -4rem;
+}
+.FAQ {
+  width: 55%;
+  padding: 25px 5% 20px 5%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  font-family: "Kumbh Sans", sans-serif;
+}
+h4 {
+  font-size: 12px;
+  position: sticky;
+}
+p {
+  font-size: 12px;
+  opacity: 70%;
+}
+button {
+  background-color: transparent;
+  color: rgb(100, 99, 99);
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+}
+.active,
+.collapsible:hover {
+  color: rgb(7, 1, 1);
+}
+.woman_image {
+  display: none;
+}
+.collapsible::after {
+  content: url(images/icon-arrow-down.svg);
+}
+.active::after {
+  transform: rotate(180deg);
+}
+
+@media screen and (max-width: 767px) {
+  .main {
+    width: 340px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+  }
+  .imgs {
+    width: 100%;
+    min-height: 30%;
+    background-repeat: no-repeat;
+    background-size: 15rem;
+  }
+  .FAQ {
+    width: 90%;
+    height: 95%;
+  }
+  .box {
+    display: none;
+  }
+  h2 {
+    margin: -60px auto 0px auto;
+  }
+  p {
+    padding: 2px;
+  }
+  .collapsible {
+    padding: 0.3rem;
+  }
+  .woman_image {
+    display: block;
+    position: absolute;
+    width: 70%;
+    align-items: center;
+    margin: -6.6rem auto 0 3rem;
+  }
+}
